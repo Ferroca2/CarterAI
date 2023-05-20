@@ -1,0 +1,283 @@
+[debug] [2023-05-20T18:25:34.290Z] ----------------------------------------------------------------------
+[debug] [2023-05-20T18:25:34.293Z] Command:       /usr/bin/node /home/ferroca/.local/bin/firebase emulators:start --export-on-exit --import=./firebase/exports
+[debug] [2023-05-20T18:25:34.294Z] CLI Version:   11.20.0
+[debug] [2023-05-20T18:25:34.294Z] Platform:      linux
+[debug] [2023-05-20T18:25:34.294Z] Node Version:  v16.18.0
+[debug] [2023-05-20T18:25:34.294Z] Time:          Sat May 20 2023 15:25:34 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2023-05-20T18:25:34.295Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-20T18:25:34.431Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-20T18:25:34.431Z] > authorizing via signed-in user (matheus.alexandre.ferraz@gmail.com)
+[debug] [2023-05-20T18:25:34.475Z] openjdk version "17.0.4" 2022-07-19
+
+[debug] [2023-05-20T18:25:34.476Z] OpenJDK Runtime Environment (build 17.0.4+8-Ubuntu-122.04)
+OpenJDK 64-Bit Server VM (build 17.0.4+8-Ubuntu-122.04, mixed mode, sharing)
+
+[debug] [2023-05-20T18:25:34.481Z] Parsed Java major version: 17
+[info] i  emulators: Starting emulators: auth, functions, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, database, hosting, pubsub, storage"}}
+[debug] [2023-05-20T18:25:34.493Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-05-20T18:25:34.493Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-05-20T18:25:34.493Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-05-20T18:25:34.493Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-05-20T18:25:34.493Z] [database] Database Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-05-20T18:25:34.493Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-05-20T18:25:34.494Z] [pubsub] Pub/Sub Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-05-20T18:25:34.494Z] [storage] Storage Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-05-20T18:25:34.494Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"pubsub":[{"address":"127.0.0.1","family":"IPv4","port":8085}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-05-20T18:25:34.505Z] [hub] writing locator at /tmp/hub-carterai.json
+[debug] [2023-05-20T18:25:34.512Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-05-20T18:25:34.512Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-05-20T18:25:34.512Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"pubsub":[{"address":"127.0.0.1","family":"IPv4","port":8085}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[info] ✔  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2023-05-20T18:25:34.564Z] defaultcredentials: writing to file /home/ferroca/.config/firebase/matheus_alexandre.ferraz_gmail.com_application_default_credentials.json
+[debug] [2023-05-20T18:25:34.577Z] Setting GAC to /home/ferroca/.config/firebase/matheus_alexandre.ferraz_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /home/ferroca/.config/firebase/matheus_alexandre.ferraz_gmail.com_application_default_credentials.json"}}
+[debug] [2023-05-20T18:25:34.584Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/carterai/adminSdkConfig [none]
+[debug] [2023-05-20T18:25:35.254Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/carterai/adminSdkConfig 200
+[debug] [2023-05-20T18:25:35.255Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/carterai/adminSdkConfig {"projectId":"carterai","storageBucket":"carterai.appspot.com","locationId":"southamerica-east1"}
+[debug] [2023-05-20T18:25:35.472Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-05-20T18:25:35.473Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2023-05-20T18:25:35.473Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/home/ferroca/.cache/firebase/emulators/cloud-firestore-emulator-v1.15.1.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","carterai","--rules","/home/ferroca/Unicorns/carter-ai/firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/home/ferroca/.cache/firebase/emulators/cloud-firestore-emulator-v1.15.1.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"carterai\",\"--rules\",\"/home/ferroca/Unicorns/carter-ai/firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2023-05-20T18:25:36.535Z] May 20, 2023 3:25:36 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://127.0.0.1:9150
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 3:25:36 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:9150\n"}}
+[debug] [2023-05-20T18:25:36.565Z] API endpoint: http://127.0.0.1:8080 {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://127.0.0.1:8080"}}
+[debug] [2023-05-20T18:25:36.565Z] 
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
+
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nDev App Server is now running.\n\n"}}
+[info] ✔  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2023-05-20T18:25:36.746Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/carterai [none]
+[debug] [2023-05-20T18:25:37.495Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/carterai 200
+[debug] [2023-05-20T18:25:37.496Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/carterai {"projectId":"carterai","projectNumber":"920738429096","displayName":"CarterAI","name":"projects/carterai","resources":{"hostingSite":"carterai","storageBucket":"carterai.appspot.com","locationId":"southamerica-east1"},"state":"ACTIVE","etag":"1_88d753e9-38e8-4a7e-95fe-739762564981"}
+[debug] [2023-05-20T18:25:37.497Z] database rules config:  []
+[warn] ⚠  database: Did not find a Realtime Database rules file specified in a firebase.json config file. The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration. {"metadata":{"emulator":{"name":"database"},"message":"Did not find a Realtime Database rules file specified in a firebase.json config file. The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration."}}
+[debug] [2023-05-20T18:25:37.507Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2023-05-20T18:25:37.507Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-05-20T18:25:37.507Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2023-05-20T18:25:37.507Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/home/ferroca/.cache/firebase/emulators/firebase-database-emulator-v4.11.0.jar","--host","127.0.0.1","--port",9000,"--single_project_mode","Warning","--functions_emulator_host","127.0.0.1","--functions_emulator_port",5001],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"/home/ferroca/.cache/firebase/emulators/firebase-database-emulator-v4.11.0.jar\",\"--host\",\"127.0.0.1\",\"--port\",9000,\"--single_project_mode\",\"Warning\",\"--functions_emulator_host\",\"127.0.0.1\",\"--functions_emulator_port\",5001],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
+[debug] [2023-05-20T18:25:39.498Z] 15:25:39.496 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+ {"metadata":{"emulator":{"name":"database"},"message":"15:25:39.496 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started\n"}}
+[debug] [2023-05-20T18:25:39.758Z] 15:25:39.758 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
+ {"metadata":{"emulator":{"name":"database"},"message":"15:25:39.758 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000\n"}}
+[debug] [2023-05-20T18:25:49.395Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2023-05-20T18:25:49.396Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-05-20T18:25:49.396Z] Starting Pub/Sub Emulator with command {"binary":"/home/ferroca/.cache/firebase/emulators/pubsub-emulator-0.7.1/pubsub-emulator/bin/cloud-pubsub-emulator","args":["--host=127.0.0.1","--port=8085"],"optionalArgs":["port","host"],"joinArgs":true} {"metadata":{"emulator":{"name":"pubsub"},"message":"Starting Pub/Sub Emulator with command {\"binary\":\"/home/ferroca/.cache/firebase/emulators/pubsub-emulator-0.7.1/pubsub-emulator/bin/cloud-pubsub-emulator\",\"args\":[\"--host=127.0.0.1\",\"--port=8085\"],\"optionalArgs\":[\"port\",\"host\"],\"joinArgs\":true}"}}
+[info] i  pubsub: Pub/Sub Emulator logging to pubsub-debug.log {"metadata":{"emulator":{"name":"pubsub"},"message":"Pub/Sub Emulator logging to \u001b[1mpubsub-debug.log\u001b[22m"}}
+[debug] [2023-05-20T18:25:49.509Z] This is the Google Pub/Sub fake.
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"This is the Google Pub/Sub fake.\n"}}
+[debug] [2023-05-20T18:25:49.510Z] Implementation may be incomplete or differ from the real system.
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"Implementation may be incomplete or differ from the real system.\n"}}
+[debug] [2023-05-20T18:25:49.556Z] mai. 20, 2023 3:25:49 PM com.google.cloud.pubsub.testing.v1.Main main
+INFORMAÇÕES: IAM integration is disabled. IAM policy methods and ACL checks are not supported
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"mai. 20, 2023 3:25:49 PM com.google.cloud.pubsub.testing.v1.Main main\nINFORMAÇÕES: IAM integration is disabled. IAM policy methods and ACL checks are not supported\n"}}
+[debug] [2023-05-20T18:25:49.731Z] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"SLF4J: Failed to load class \"org.slf4j.impl.StaticLoggerBinder\".\nSLF4J: Defaulting to no-operation (NOP) logger implementation\nSLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.\n"}}
+[debug] [2023-05-20T18:25:50.181Z] mai. 20, 2023 3:25:50 PM com.google.cloud.pubsub.testing.v1.Main main
+INFORMAÇÕES: Server started, listening on 8085
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"mai. 20, 2023 3:25:50 PM com.google.cloud.pubsub.testing.v1.Main main\nINFORMAÇÕES: Server started, listening on 8085\n"}}
+[debug] [2023-05-20T18:25:50.447Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-05-20T18:25:51.228Z] Temp file directory for storage emulator: /tmp/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: /tmp/firebase/storage/blobs"}}
+[debug] [2023-05-20T18:25:51.236Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/carterai/sites 
+[debug] [2023-05-20T18:25:52.445Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/carterai/sites 200
+[debug] [2023-05-20T18:25:52.445Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/carterai/sites {"sites":[{"name":"projects/carterai/sites/carterai","defaultUrl":"https://carterai.web.app","appId":"1:920738429096:web:b7304c6755b585ed78aa9d","type":"DEFAULT_SITE"}]}
+[debug] [2023-05-20T18:25:52.446Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/carterai/webApps/1:920738429096:web:b7304c6755b585ed78aa9d/config [none]
+[debug] [2023-05-20T18:25:53.774Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/carterai/webApps/1:920738429096:web:b7304c6755b585ed78aa9d/config 200
+[debug] [2023-05-20T18:25:53.775Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/carterai/webApps/1:920738429096:web:b7304c6755b585ed78aa9d/config {"projectId":"carterai","appId":"1:920738429096:web:b7304c6755b585ed78aa9d","storageBucket":"carterai.appspot.com","locationId":"southamerica-east1","apiKey":"AIzaSyCsSXb2Po8-QSoMg8cVWSBB3viLIDFpezo","authDomain":"carterai.firebaseapp.com","messagingSenderId":"920738429096","measurementId":"G-QXE47XN6WG"}
+[debug] [2023-05-20T18:25:53.903Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/carterai [none]
+[debug] [2023-05-20T18:25:54.389Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/carterai 200
+[debug] [2023-05-20T18:25:54.389Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/carterai {"projectId":"carterai","projectNumber":"920738429096","displayName":"CarterAI","name":"projects/carterai","resources":{"hostingSite":"carterai","storageBucket":"carterai.appspot.com","locationId":"southamerica-east1"},"state":"ACTIVE","etag":"1_88d753e9-38e8-4a7e-95fe-739762564981"}
+[debug] [2023-05-20T18:25:54.392Z] Specified "public" directory "public" does not exist; Deploy to Hosting site "carterai" may fail or be empty.
+[info] i  hosting[carterai]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] ✔  hosting[carterai]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
+[debug] [2023-05-20T18:25:54.409Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-05-20T18:25:54.410Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-05-20T18:25:54.410Z] Starting Emulator UI with command {"binary":"node","args":["/home/ferroca/.cache/firebase/emulators/ui-v1.11.2/server/server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/home/ferroca/.cache/firebase/emulators/ui-v1.11.2/server/server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2023-05-20T18:25:54.564Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2023-05-20T18:25:54.564Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "/home/ferroca/Unicorns/carter-ai/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/home/ferroca/Unicorns/carter-ai/functions\" for Cloud Functions..."}}
+[debug] [2023-05-20T18:25:54.691Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-05-20T18:25:56.270Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "dist/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "openai": "^3.2.1"
+  },
+  "devDependencies": {
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: There was an error reading functions/package.json:
+
+ functions/dist/index.js does not exist, can't deploy Cloud Functions {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: There was an error reading functions/package.json:\n\n functions/dist/index.js does not exist, can't deploy Cloud Functions"}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬─────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:4000/auth      │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Functions      │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Firestore      │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Database       │ 127.0.0.1:9000 │ http://127.0.0.1:4000/database  │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Hosting        │ 127.0.0.1:5000 │ n/a                             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Pub/Sub        │ 127.0.0.1:8085 │ n/a                             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Storage        │ 127.0.0.1:9199 │ http://127.0.0.1:4000/storage   │
+└────────────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500, 9150
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2023-05-20T19:49:50.941Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/carterai/trigger_multicast [none]
+[debug] [2023-05-20T19:49:50.979Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/carterai/trigger_multicast {"eventId":"74f532c7-e736-46f1-85bd-b87ba0a54cfb","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/carterai","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2023-05-20T19:49:50.917Z","data":{"uid":"X7et4OASlLF3o5zpfMI2zRitAX9f","email":"matehus.fefasda@gmail.com","emailVerified":false,"metadata":{"creationTime":"2023-05-20T19:49:50.900Z","lastSignInTime":"2023-05-20T19:49:50.900Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"matehus.fefasda@gmail.com","federatedId":"matehus.fefasda@gmail.com","rawId":"matehus.fefasda@gmail.com"}]}}
+[debug] [2023-05-20T19:49:51.277Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/carterai/trigger_multicast 200
+[debug] [2023-05-20T19:49:51.277Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/carterai/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2023-05-20T19:49:52.985Z] May 20, 2023 4:49:52 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 4:49:52 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-05-20T19:49:52.986Z] May 20, 2023 4:49:52 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 4:49:52 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-05-20T19:49:57.472Z] May 20, 2023 4:49:57 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 4:49:57 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-05-20T19:49:57.611Z] May 20, 2023 4:49:57 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 4:49:57 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-05-20T19:50:18.889Z] May 20, 2023 4:50:18 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 4:50:18 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2023-05-20T19:50:21.830Z] May 20, 2023 4:50:21 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 4:50:21 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-05-20T19:50:23.830Z] May 20, 2023 4:50:23 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 4:50:23 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected HTTP/2 connection.\n"}}
+[debug] [2023-05-20T19:50:58.263Z] May 20, 2023 4:50:58 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 4:50:58 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-05-20T19:50:58.278Z] May 20, 2023 4:50:58 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
+INFO: channel closed
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 4:50:58 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\nINFO: channel closed\n"}}
+[debug] [2023-05-20T19:52:34.768Z] May 20, 2023 4:52:34 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 4:52:34 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-05-20T19:52:35.102Z] May 20, 2023 4:52:35 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 4:52:35 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-05-20T19:52:35.510Z] May 20, 2023 4:52:35 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 4:52:35 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-05-20T19:53:20.562Z] May 20, 2023 4:53:20 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 4:53:20 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-05-20T19:58:19.749Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/carterai/trigger_multicast [none]
+[debug] [2023-05-20T19:58:19.749Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/carterai/trigger_multicast {"eventId":"cc96dd09-b1a6-4385-ac80-864c0af27e55","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/carterai","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2023-05-20T19:58:19.638Z","data":{"uid":"AZiSl0TtAV4bUniKcRBLKrsTkRGH","email":"amdmasdas@gmail.com","emailVerified":false,"metadata":{"creationTime":"2023-05-20T19:58:19.232Z","lastSignInTime":"2023-05-20T19:58:19.232Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"amdmasdas@gmail.com","federatedId":"amdmasdas@gmail.com","rawId":"amdmasdas@gmail.com"}]}}
+[debug] [2023-05-20T19:58:20.035Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/carterai/trigger_multicast 200
+[debug] [2023-05-20T19:58:20.035Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/carterai/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2023-05-20T19:58:21.418Z] May 20, 2023 4:58:21 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 4:58:21 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-05-20T19:58:21.419Z] May 20, 2023 4:58:21 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 4:58:21 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-05-20T19:58:21.726Z] May 20, 2023 4:58:21 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 4:58:21 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-05-20T19:58:23.128Z] May 20, 2023 4:58:23 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 4:58:23 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-05-20T19:59:21.772Z] May 20, 2023 4:59:21 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 4:59:21 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-05-20T19:59:22.135Z] May 20, 2023 4:59:22 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
+INFO: channel closed
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 4:59:22 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\nINFO: channel closed\n"}}
+[debug] [2023-05-20T20:00:43.666Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/carterai/trigger_multicast [none]
+[debug] [2023-05-20T20:00:43.667Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/carterai/trigger_multicast {"eventId":"e7554c14-3fd8-4add-b15f-ace2aacbe4c5","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/carterai","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2023-05-20T20:00:43.666Z","data":{"uid":"JeAT00yMN5GdHdv8X0h0ZfjxPmvU","email":"dasdasd@gmail.com","emailVerified":false,"metadata":{"creationTime":"2023-05-20T20:00:43.666Z","lastSignInTime":"2023-05-20T20:00:43.666Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"dasdasd@gmail.com","federatedId":"dasdasd@gmail.com","rawId":"dasdasd@gmail.com"}]}}
+[debug] [2023-05-20T20:00:43.674Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/carterai/trigger_multicast 200
+[debug] [2023-05-20T20:00:43.675Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/carterai/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2023-05-20T20:00:44.346Z] May 20, 2023 5:00:43 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+May 20, 2023 5:00:43 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+May 20, 2023 5:00:44 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+May 20, 2023 5:00:44 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+May 20, 2023 5:00:44 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 5:00:43 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\nMay 20, 2023 5:00:43 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\nMay 20, 2023 5:00:44 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\nMay 20, 2023 5:00:44 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\nMay 20, 2023 5:00:44 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-05-20T20:00:44.368Z] May 20, 2023 5:00:44 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 5:00:44 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-05-20T20:00:44.526Z] May 20, 2023 5:00:44 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 5:00:44 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-05-20T20:00:44.542Z] May 20, 2023 5:00:44 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
+INFO: channel closed
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 5:00:44 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\nINFO: channel closed\n"}}
+[debug] [2023-05-20T20:03:47.699Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/carterai/trigger_multicast [none]
+[debug] [2023-05-20T20:03:47.700Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/carterai/trigger_multicast {"eventId":"8c6f676a-fe0e-4a48-a3af-5df410d30025","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/carterai","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2023-05-20T20:03:47.698Z","data":{"uid":"1iUtlK6HngqN9SF1AM0hcKLz7AqF","email":"asdasdas@gmail.com","emailVerified":false,"metadata":{"creationTime":"2023-05-20T20:03:47.479Z","lastSignInTime":"2023-05-20T20:03:47.479Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"asdasdas@gmail.com","federatedId":"asdasdas@gmail.com","rawId":"asdasdas@gmail.com"}]}}
+[debug] [2023-05-20T20:03:47.708Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/carterai/trigger_multicast 200
+[debug] [2023-05-20T20:03:47.708Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/carterai/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2023-05-20T20:03:48.460Z] May 20, 2023 5:03:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+May 20, 2023 5:03:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+May 20, 2023 5:03:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+May 20, 2023 5:03:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 5:03:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\nMay 20, 2023 5:03:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\nMay 20, 2023 5:03:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\nMay 20, 2023 5:03:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-05-20T20:03:48.470Z] May 20, 2023 5:03:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 5:03:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-05-20T20:03:48.655Z] May 20, 2023 5:03:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 5:03:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-05-20T20:03:48.691Z] May 20, 2023 5:03:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 5:03:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2023-05-20T20:03:48.706Z] May 20, 2023 5:03:48 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
+INFO: channel closed
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 20, 2023 5:03:48 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\nINFO: channel closed\n"}}

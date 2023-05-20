@@ -10,7 +10,7 @@
 
 const { configure } = require('quasar/wrappers');
 
-module.exports = configure(function (/* ctx */) {
+module.exports = configure(function (ctx) {
     return {
         eslint: {
             // fix: true,
@@ -28,13 +28,18 @@ module.exports = configure(function (/* ctx */) {
         // --> boot files are part of "main.js"
         // https://v2.quasar.dev/quasar-cli-vite/boot-files
         boot: [
-
+            'firebase',
+            ...ctx.dev ? [
+                'firebase/emulators',
+            ] : [],
             'axios',
+            'router-guards',
         ],
 
         // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css
         css: [
             'app.scss',
+            'transitions.scss',
         ],
 
         // https://github.com/quasarframework/quasar/tree/dev/extras
@@ -59,51 +64,27 @@ module.exports = configure(function (/* ctx */) {
             },
 
             vueRouterMode: 'history', // available values: 'hash', 'history'
-            // vueRouterBase,
-            // vueDevtools,
-            // vueOptionsAPI: false,
-
-            // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
-
-            // publicPath: '/',
-            // analyze: true,
-            // env: {},
-            // rawDefine: {}
-            // ignorePublicFolder: true,
-            // minify: false,
-            // polyfillModulePreload: true,
-            // distDir
-
-            // extendViteConf (viteConf) {},
-            // viteVuePluginOptions: {},
-
-            // vitePlugins: [
-            //   [ 'package-name', { ..options.. } ]
-            // ]
         },
 
         // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#devServer
         devServer: {
-            // https: true
-            open: true, // opens browser window automatically
+            https: false,
+            port: 9000,
+            open: true,
+            proxy: {
+                '/api': `http://localhost:5000`,
+            },
         },
 
         // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#framework
         framework: {
-            config: {},
-
-            // iconSet: 'material-icons', // Quasar icon set
-            // lang: 'en-US', // Quasar language pack
-
-            // For special cases outside of where the auto-import strategy can have an impact
-            // (like functional components as one of the examples),
-            // you can manually specify Quasar components/directives to be available everywhere:
-            //
-            // components: [],
-            // directives: [],
-
-            // Quasar plugins
-            plugins: [],
+            config: {
+                dark: 'true',
+            },
+            plugins: [
+                'Dialog',
+                'Notify',
+            ],
         },
 
         // animations: 'all', // --- includes all animations
@@ -111,35 +92,13 @@ module.exports = configure(function (/* ctx */) {
         animations: [],
 
         // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#sourcefiles
-        // sourceFiles: {
-        //   rootComponent: 'src/App.vue',
-        //   router: 'src/router/index',
-        //   store: 'src/store/index',
-        //   registerServiceWorker: 'src-pwa/register-service-worker',
-        //   serviceWorker: 'src-pwa/custom-service-worker',
-        //   pwaManifestFile: 'src-pwa/manifest.json',
-        //   electronMain: 'src-electron/electron-main',
-        //   electronPreload: 'src-electron/electron-preload'
-        // },
 
         // https://v2.quasar.dev/quasar-cli-vite/developing-ssr/configuring-ssr
         ssr: {
-            // ssrPwaHtmlFilename: 'offline.html', // do NOT use index.html as name!
-            // will mess up SSR
-
-            // extendSSRWebserverConf (esbuildConf) {},
-            // extendPackageJson (json) {},
-
             pwa: false,
-
-            // manualStoreHydration: true,
-            // manualPostHydrationTrigger: true,
-
-            prodPort: 3000, // The default port that the production server should use
-            // (gets superseded if process.env.PORT is specified at runtime)
-
+            prodPort: 3000,
             middlewares: [
-                'render', // keep this as last one
+                'render',
             ],
         },
 
@@ -150,16 +109,10 @@ module.exports = configure(function (/* ctx */) {
             swFilename: 'sw.js',
             manifestFilename: 'manifest.json',
             useCredentialsForManifestTag: false,
-            // useFilenameHashes: true,
-            // extendGenerateSWOptions (cfg) {}
-            // extendInjectManifestOptions (cfg) {},
-            // extendManifestJson (json) {}
-            // extendPWACustomSWConf (esbuildConf) {}
         },
 
         // Full list of options: https://v2.quasar.dev/quasar-cli-vite/developing-cordova-apps/configuring-cordova
         cordova: {
-            // noIosLegacyBuildFlag: true, // uncomment only if you know what you are doing
         },
 
         // Full list of options: https://v2.quasar.dev/quasar-cli-vite/developing-capacitor-apps/configuring-capacitor
@@ -169,8 +122,6 @@ module.exports = configure(function (/* ctx */) {
 
         // Full list of options: https://v2.quasar.dev/quasar-cli-vite/developing-electron-apps/configuring-electron
         electron: {
-            // extendElectronMainConf (esbuildConf)
-            // extendElectronPreloadConf (esbuildConf)
 
             inspectPort: 5858,
 

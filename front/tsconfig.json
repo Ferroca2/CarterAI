@@ -26,7 +26,7 @@
                 "src/stores/*"
             ],
             "utils/*": [
-                "src/utils/*"
+                "src/util/*"
             ],
             "types/*": [
                 "src/types/*"
