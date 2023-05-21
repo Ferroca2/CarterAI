@@ -1,58 +1,90 @@
 <script setup lang="ts">
 import { useQuasar } from 'quasar';
+import {
+    matRestaurant,
+    matFitnessCenter,
+    matChat,
+} from '@quasar/extras/material-icons';
+
+import { useRouter } from 'vue-router';
+import { onMounted, ref } from 'vue';
+import { getTrainingApi } from 'boot/axios';
+
+const router = useRouter();
 
 const $q = useQuasar();
 
+const tab = ref('mails');
+
 $q.dark.set(true);
 
+onMounted(async () => {
+    const { data } = await getTrainingApi.get('/');
+    console.log(data);
+});
 </script>
 
 <template>
     <q-layout view="hHh lpR fFf">
         <q-header
             reveal
-            class="bg-primary text-white q-pa-sm"
+            class="bg-dark text-white q-pa-sm"
             height-hint="98"
         >
             <q-toolbar>
-                <q-toolbar-title>
-                    <q-avatar>
-                        <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">
-                    </q-avatar>
-                    Crypto Reports
+                <q-btn
+                    flat
+                    round
+                    dense
+                    icon="menu"
+                    class="q-mr-sm"
+                />
+
+                <q-toolbar-title class="text-center">
+                    CarterAI
                 </q-toolbar-title>
 
                 <q-btn
                     flat
-                    text-color="accent"
-                    to="/admin"
-                    label="Publish"
-                    no-caps
+                    round
+                    dense
+                    icon="whatshot"
                 />
-                <q-btn
-                    flat
-                    text-color="accent"
-                    to="/admin/coins"
-                    label="Coin Infos"
-                    no-caps
-                />
-                <q-btn
-                    flat
-                    text-color="accent"
-                    to="/admin/researches"
-                    label="Reasearchs"
-                    no-caps
-                />
-                <q-space />
-                <q-space />
-                <q-space />
-                <q-space />
-                <q-space />
             </q-toolbar>
         </q-header>
 
         <q-page-container>
             <router-view />
         </q-page-container>
+        <q-footer class="footer bg-dark">
+            <q-tabs
+                v-model="tab"
+                indicator-color="transparent"
+                active-color="accent"
+                class="full-width full-height text-grey-5 shadow-2"
+            >
+                <q-route-tab
+                    name="mails"
+                    :icon="matRestaurant"
+                    to="/fitness/diet"
+                />
+                <q-route-tab
+                    name="alarms"
+                    :icon="matFitnessCenter"
+                    to="/fitness/training"
+                />
+                <q-route-tab
+                    name="movies"
+                    :icon="matChat"
+                    to="/fitness/chat"
+                />
+            </q-tabs>
+        </q-footer>
     </q-layout>
 </template>
+
+<style lang="scss" scoped>
+.footer {
+    height: 8vh;
+}
+</style>

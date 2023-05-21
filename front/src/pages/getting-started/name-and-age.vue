@@ -5,15 +5,44 @@ import {
     mdiGenderMale,
 } from '@quasar/extras/mdi-v6';
 
+import { useSessionStore } from 'stores/session';
+import { usePersonalDataStore } from 'stores/personalData';
+import useError from 'src/hooks/useError';
+import { doc, getFirestore, setDoc } from '@firebase/firestore';
+import { useRouter } from 'vue-router';
+
+const session = useSessionStore();
+const personalData = usePersonalDataStore();
+const error = useError();
+const router = useRouter();
+
 const loading = ref(false);
 
 const data = reactive({
     name: '',
-    age: '',
+    sex: '',
 });
 
-function next() {
-    console.log('name and age');
+async function next() {
+    loading.value = true;
+    try {
+        const userRef = doc(getFirestore(), 'users', session.user!.uid);
+
+        await setDoc(userRef, {
+            name: data.name,
+            sex: data.sex,
+        }, { merge: true });
+
+        await personalData.updateStage('name-and-age', true);
+
+        router.replace('/dashboard');
+    }
+    catch (err) {
+        error(err);
+    }
+    finally {
+        loading.value = false;
+    }
 }
 
 </script>
@@ -40,8 +69,9 @@ function next() {
                             <q-icon :name="mdiFaceMan" />
                         </template>
                     </q-input>
-                    <q-input
-                        v-model="data.age"
+                    <q-select
+                        v-model="data.sex"
+                        :options="['Masculino', 'Feminino']"
                         outlined
                         label="Sexo"
                         type="text"
@@ -50,7 +80,7 @@ function next() {
                         <template #prepend>
                             <q-icon :name="mdiGenderMale" />
                         </template>
-                    </q-input>
+                    </q-select>
                 </div>
             </q-form>
             <q-footer
@@ -63,6 +93,7 @@ function next() {
                     color="accent"
                     type="submit"
                     :loading="loading"
+                    @click="next"
                 >
                     Próximo
                     <template #loading>

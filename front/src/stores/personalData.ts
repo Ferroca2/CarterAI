@@ -20,9 +20,9 @@ export const personalDataSteps = [
 export type PersonalDataStage = typeof personalDataSteps[number];
 
 interface PersonalDataStageData {
-    'name-and-age'?: string;
-    'height-and-weight'?: string;
-    'goals'?: string;
+    'name-and-age'?: boolean;
+    'height-and-weight'?: boolean;
+    'goals'?: boolean;
 }
 
 type PersonalDataStageItem<S extends PersonalDataStage> = Required<PersonalDataStageData>[S];
@@ -55,7 +55,7 @@ export const usePersonalDataStore = defineStore('personalData', () => {
         steps.value = null;
 
         const snap = await getDoc(
-            doc(db, 'users', uid)
+            doc(db, 'onboarding', uid)
         );
 
         if (update) {

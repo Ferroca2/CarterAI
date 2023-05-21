@@ -33,7 +33,7 @@ export default boot(({ router, store: pinia }) => {
                 };
             }
             else if (to.path.startsWith('/getting-started')) {
-                return { path: '/menu/orders' };
+                return { path: '/fitness/diet' };
             }
         }
 

@@ -41,6 +41,28 @@ const routes: RouteRecordRaw[] = [
         },
     },
 
+    {
+        path: '/fitness',
+        component: () => import('layouts/main-layout.vue'),
+        children: [
+            {
+                path: 'diet',
+                component: () => import('pages/diet.vue'),
+            },
+            {
+                path: 'training',
+                component: () => import('pages/training.vue'),
+            },
+            {
+                path: 'chat',
+                component: () => import('pages/chat.vue'),
+            },
+        ],
+        meta: {
+            access: 'auth-only',
+        },
+    },
+
     // Always leave this as last one,
     // but you can also remove it
     {

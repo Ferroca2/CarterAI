@@ -4,6 +4,6 @@
 
 <template>
     <q-page class="row items-center justify-evenly">
-        <div>Dashboard</div>
+        <div>Chat</div>
     </q-page>
 </template>

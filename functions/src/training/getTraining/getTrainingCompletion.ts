@@ -1,11 +1,22 @@
 /* eslint-disable camelcase */
 import openai from '../../utils/openai';
 
+const prompt = `Me de uma dieta personalizada para mim, eu tenho 1.80 de altura, 80kg, 20 anos, quero ganhar massa muscular,
+ e tenho intolerância a lactose. forneça a resposta no formato
+ JSON={
+    "totalCalories": string,
+    meals=[{"nameOfMeal": string, "food":string[]
+ }
+ SEM ESPAÇOS E SEM QUEBRA DE LINHA E TAMBEM SEM CONTRA BARRA, não deve haver nenhum caracter especial(MUITO IMPORTANTE)`;
+
 
 export async function getTrainingCompletion () {
-    const texts = await openai.createCompletion({
-        model: 'text-davinci-003',
-        prompt: `Resuma a notícia presente no seguinte site colocando uma headline e o resumo dando um output no formato json seguinte: {"headline": "string", "resume": "string"} não se esqueça de colocar as aspas duplas no json e sem colocar ponto final no começo das frases`,
+    const texts = await openai.createChatCompletion({
+        model: 'gpt-3.5-turbo',
+        messages: [
+            {role: 'system', content: 'You are a helpful personal coach'},
+            {role: 'user', content: prompt},
+        ],
         temperature: 0.7,
         max_tokens: 1000,
     });
@@ -15,6 +26,7 @@ export async function getTrainingCompletion () {
     // } else {
     //     formatted = resume.data.choices[0]!.text!.replace(/[\r\n]/gm, '').trim().replace(/\\/gm, '');
     // }
+    const formatted = texts.data.choices[0]!.message!.content.replace(/[\r\n]/gm, '').trim().replace(/\\/gm, '');
 
-    return texts;
+    return JSON.parse(formatted);
 }
