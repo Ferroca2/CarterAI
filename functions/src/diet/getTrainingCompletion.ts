@@ -1,5 +1,5 @@
 /* eslint-disable camelcase */
-import openai from '../../utils/openai';
+import openai from '../utils/openai';
 
 const prompt = `Me de uma dieta personalizada para mim, eu tenho 1.80 de altura, 80kg, 20 anos, quero ganhar massa muscular,
  e tenho intolerância a lactose. forneça a resposta no formato

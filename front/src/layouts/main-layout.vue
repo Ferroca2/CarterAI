@@ -6,28 +6,31 @@ import {
     matChat,
 } from '@quasar/extras/material-icons';
 
-import { useRouter } from 'vue-router';
 import { onMounted, ref } from 'vue';
-import { getTrainingApi } from 'boot/axios';
-
-const router = useRouter();
+import { setDietApi } from 'boot/axios';
+import { useSessionStore } from 'stores/session';
 
 const $q = useQuasar();
+
+const session = useSessionStore();
 
 const tab = ref('mails');
 
 $q.dark.set(true);
 
 onMounted(async () => {
-    const { data } = await getTrainingApi.get('/');
-    console.log(data);
+    try{
+        const { data } = await setDietApi.post('/', {body: { userId: session.user?.uid}});
+        console.log(data);
+    }catch(e) {
+        console.log(e);
+    }
 });
 </script>
 
 <template>
     <q-layout view="hHh lpR fFf">
         <q-header
-            reveal
             class="bg-dark text-white q-pa-sm"
             height-hint="98"
         >

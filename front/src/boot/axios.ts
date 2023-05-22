@@ -13,17 +13,17 @@ declare module '@vue/runtime-core' {
 // good idea to move this instance creation inside of the
 // "export default () => {}" function below (which runs individually
 // for each client)
-const getTrainingApi = axios.create({
-    baseURL: 'http://localhost:9000/api/get-training',
+const setDietApi = axios.create({
+    baseURL: 'http://localhost:9001/api/set-diet',
 });
 
 export default boot(({ app }) => {
 
     Object.assign(app.config.globalProperties, {
         $axios: axios,
-        $getTrainingApi: getTrainingApi,
+        $setDietApi: setDietApi,
     });
 
 });
 
-export { axios, getTrainingApi };
+export { axios, setDietApi };
