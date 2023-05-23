@@ -61,7 +61,7 @@ async function next() {
                     <q-input
                         v-model="data.height"
                         outlined
-                        label="Altura(m)"
+                        label="Altura(cm)"
                         type="number"
                         color="accent"
                     >
@@ -73,7 +73,7 @@ async function next() {
                         v-model="data.weight"
                         outlined
                         label="Peso(kg)"
-                        type="text"
+                        type="number"
                         color="accent"
                     >
                         <template #prepend>

@@ -5,8 +5,8 @@ const prompt = `Me de uma dieta personalizada para mim, eu tenho 1.80 de altura,
  e tenho intolerância a lactose. forneça a resposta no formato
  JSON={
     "totalCalories": string,
-    meals=[{"nameOfMeal": string, "food":string[]
- }
+    meals=[{"hour": string, "nameOfMeal": string, "food":string[], "macros": {"protein": string, "carbs": string, "fat": string}}]
+ }, lembre-se de colocar a gramatura das comidas e o nome das comidas
  SEM ESPAÇOS E SEM QUEBRA DE LINHA E TAMBEM SEM CONTRA BARRA, não deve haver nenhum caracter especial(MUITO IMPORTANTE)`;
 
 

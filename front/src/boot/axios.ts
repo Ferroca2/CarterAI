@@ -17,13 +17,18 @@ const setDietApi = axios.create({
     baseURL: 'http://localhost:9001/api/set-diet',
 });
 
+const chatApi = axios.create({
+    baseURL: 'http://localhost:9001/api/get-chat-response',
+});
+
 export default boot(({ app }) => {
 
     Object.assign(app.config.globalProperties, {
         $axios: axios,
         $setDietApi: setDietApi,
+        $chatApi: chatApi,
     });
 
 });
 
-export { axios, setDietApi };
+export { axios, setDietApi, chatApi };

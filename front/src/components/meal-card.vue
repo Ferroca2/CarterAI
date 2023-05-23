@@ -1,5 +1,18 @@
 <script setup lang="ts">
 import { matRefresh } from '@quasar/extras/material-icons';
+
+interface Meal {
+    nameOfMeal: string;
+    foods: string[];
+    hour: string;
+    macros: {
+        protein: string;
+        carbs: string;
+        fat: string;
+    };
+}
+
+defineProps<Meal>();
 </script>
 
 
@@ -10,15 +23,15 @@ import { matRefresh } from '@quasar/extras/material-icons';
     >
         <q-card-section class="bg-grey-8 text-white">
             <div class="text-subtitle1 text-weight-bold">
-                Café da manhã
-                <span class="text-grey">     8:00</span>
+                {{ nameOfMeal }}
+                <span class="text-grey">     {{ hour }}</span>
             </div>
             <div class="row text-caption">
-                <span class="text-blue">Proteínas: 8g </span>
+                <span class="text-blue">Proteínas: {{ macros.protein }}</span>
                 <div class="separator" />
-                <span class="text-accent">Carboidratos: 10g </span>
+                <span class="text-accent">Carboidratos: {{ macros.carbs }}</span>
                 <div class="separator" />
-                <span class="text-green">Gorduras: 2g</span>
+                <span class="text-green">Gorduras: {{ macros.fat }}</span>
             </div>
         </q-card-section>
 
@@ -26,17 +39,12 @@ import { matRefresh } from '@quasar/extras/material-icons';
             class="column"
             align="center"
         >
-            <div class="text-subtitle2">
-                1/2 copo de yogurte
-            </div>
-            <div class="text-subtitle2">
-                4 ovos mexidos
-            </div>
-            <div class="text-subtitle2">
-                Pão frances
-            </div>
-            <div class="text-subtitle2">
-                Aveia e mel
+            <div
+                v-for="food in foods"
+                :key="food"
+                class="text-subtitle2"
+            >
+                {{ food }}
             </div>
         </q-card-section>
         <q-card-actions

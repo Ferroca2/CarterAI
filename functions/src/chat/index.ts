@@ -1,22 +1,9 @@
 import { Request, Response } from 'firebase-functions';
-import { getDietCompletion } from './getDietCompletion';
+import { getChatResponse } from './getChatResponse';
 import * as admin from 'firebase-admin';
 
 const db = admin.firestore();
 
-interface DietResponse {
-    totalCalories: string;
-    meals: {
-        nameOfMeal: string;
-        hour: string;
-        food: string[];
-        macros: {
-            protein: string;
-            carbs: string;
-            fat: string;
-        };
-    }[];
-}
 
 export default async function getTraining(req: Request, res: Response) {
     if (req.method.toUpperCase() !== 'POST') {
@@ -34,13 +21,13 @@ export default async function getTraining(req: Request, res: Response) {
     const userId = req.body.body.userId;
 
     try{
-        const diet: DietResponse = await getDietCompletion();
+        const chatResponse = await getChatResponse(userId);
 
-        const dietRef = db.collection('diets').doc(userId);
+        const messagesRef = db.collection('users').doc(userId).collection('messages');
 
-        await dietRef.set(diet, { merge: true });
+        await messagesRef.add({name: 'Carter', text: [chatResponse], timestamp: Date.now()});
 
-        return res.status(200).json({ message: 'Dieta gerada com sucesso', diet });
+        return res.status(200).json({name: 'Carter', text: [chatResponse], timestamp: Date.now()});
 
     } catch(err) {
         console.log(err);

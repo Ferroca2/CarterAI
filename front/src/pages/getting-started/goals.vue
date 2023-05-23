@@ -5,6 +5,7 @@ import { usePersonalDataStore } from 'stores/personalData';
 import useError from 'src/hooks/useError';
 import { doc, getFirestore, setDoc } from '@firebase/firestore';
 import { useRouter } from 'vue-router';
+import { setDietApi } from 'boot/axios';
 
 const session = useSessionStore();
 const personalData = usePersonalDataStore();
@@ -18,13 +19,18 @@ const data = ref<string>('saude');
 async function next() {
     loading.value = true;
     try {
-        const userRef = doc(getFirestore(), 'users', session.user!.uid);
+        const userId = session.user!.uid;
+
+        const userRef = doc(getFirestore(), 'users', userId);
 
         await setDoc(userRef, {
             goal: data.value,
         }, { merge: true });
 
+        await setDietApi.post('/', {body: { userId }});
+
         await personalData.updateStage('goals', true);
+
 
         router.replace('/fitness/diet');
     }

@@ -6,26 +6,15 @@ import {
     matChat,
 } from '@quasar/extras/material-icons';
 
-import { onMounted, ref } from 'vue';
-import { setDietApi } from 'boot/axios';
-import { useSessionStore } from 'stores/session';
+import { ref } from 'vue';
 
 const $q = useQuasar();
 
-const session = useSessionStore();
 
 const tab = ref('mails');
 
 $q.dark.set(true);
 
-onMounted(async () => {
-    try{
-        const { data } = await setDietApi.post('/', {body: { userId: session.user?.uid}});
-        console.log(data);
-    }catch(e) {
-        console.log(e);
-    }
-});
 </script>
 
 <template>

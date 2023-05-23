@@ -1,5 +1,5 @@
 import { Request, Response } from 'firebase-functions';
-import { getDietCompletion } from './getDietCompletion';
+import { getTrainingCompletion } from './getTrainingCompletion';
 import * as admin from 'firebase-admin';
 
 const db = admin.firestore();
@@ -34,7 +34,7 @@ export default async function getTraining(req: Request, res: Response) {
     const userId = req.body.body.userId;
 
     try{
-        const diet: DietResponse = await getDietCompletion();
+        const diet: DietResponse = await getTrainingCompletion();
 
         const dietRef = db.collection('diets').doc(userId);
 

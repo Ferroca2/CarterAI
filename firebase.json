@@ -30,6 +30,10 @@
       {
         "source": "/api/set-diet",
         "function": "setDiet"
+      },
+      {
+        "source": "/api/get-chat-response",
+        "function": "getChatResponse"
       }
     ]
   },
@@ -53,7 +57,7 @@
       "port": 5000
     },
     "pubsub": {
-      "port": 8081
+      "port": 8082
     },
     "storage": {
       "port": 9199
