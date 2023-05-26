@@ -4,17 +4,12 @@ import * as admin from 'firebase-admin';
 
 const db = admin.firestore();
 
-interface DietResponse {
+interface TrainingResponse {
     totalCalories: string;
-    meals: {
-        nameOfMeal: string;
-        hour: string;
-        food: string[];
-        macros: {
-            protein: string;
-            carbs: string;
-            fat: string;
-        };
+    typeOfDivision: string;
+    trainings: {
+        day: string;
+        exercises: string[];
     }[];
 }
 
@@ -34,13 +29,13 @@ export default async function getTraining(req: Request, res: Response) {
     const userId = req.body.body.userId;
 
     try{
-        const diet: DietResponse = await getTrainingCompletion();
+        const training: TrainingResponse = await getTrainingCompletion();
 
-        const dietRef = db.collection('diets').doc(userId);
+        const trainingRef = db.collection('trainings').doc(userId);
 
-        await dietRef.set(diet, { merge: true });
+        await trainingRef.set(training, { merge: true });
 
-        return res.status(200).json({ message: 'Dieta gerada com sucesso', diet });
+        return res.status(200).json({ message: 'Dieta gerada com sucesso', training });
 
     } catch(err) {
         console.log(err);

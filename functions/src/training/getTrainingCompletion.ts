@@ -1,12 +1,13 @@
 /* eslint-disable camelcase */
 import openai from '../utils/openai';
 
-const prompt = `Me de uma dieta personalizada para mim, eu tenho 1.80 de altura, 80kg, 20 anos, quero ganhar massa muscular,
- e tenho intolerância a lactose. forneça a resposta no formato
+const prompt = `Voce é o melhor treinador de musculação do mundo chamado Carter, de um treino personalizada para mim,
+eu tenho 1.80 de altura, 80kg, 20 anos, quero ganhar massa muscular, forneça a resposta no formato
  JSON={
     "totalCalories": string,
-    meals=[{"hour": string, "nameOfMeal": string, "food":string[], "macros": {"protein": string, "carbs": string, "fat": string}}]
- }, lembre-se de colocar a gramatura das comidas e o nome das comidas
+    "typeOfDivision": string(example ABC),
+    "tranings"=[{day: string, exercises: string}],
+ }, lembre-se de colocar a quantidade de series e repetições além do nome do exercicio,
  SEM ESPAÇOS E SEM QUEBRA DE LINHA E TAMBEM SEM CONTRA BARRA, não deve haver nenhum caracter especial(MUITO IMPORTANTE)`;
 
 

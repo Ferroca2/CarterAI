@@ -12,3 +12,8 @@ export const getChatResponse = functions.https.onRequest(
     (...args) => import('./chat')
         .then(async m => { await m.default(...args); })
 );
+
+export const setTraining = functions.https.onRequest(
+    (...args) => import('./training')
+        .then(async m => { await m.default(...args); })
+);

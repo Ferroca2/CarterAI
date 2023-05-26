@@ -1,9 +1,9 @@
 This is the Google Pub/Sub fake.
 Implementation may be incomplete or differ from the real system.
-mai. 22, 2023 11:19:23 PM com.google.cloud.pubsub.testing.v1.Main main
+mai. 26, 2023 2:27:10 PM com.google.cloud.pubsub.testing.v1.Main main
 INFORMAÇÕES: IAM integration is disabled. IAM policy methods and ACL checks are not supported
 SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-mai. 22, 2023 11:19:24 PM com.google.cloud.pubsub.testing.v1.Main main
+mai. 26, 2023 2:27:11 PM com.google.cloud.pubsub.testing.v1.Main main
 INFORMAÇÕES: Server started, listening on 8082

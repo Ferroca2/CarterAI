@@ -22,10 +22,10 @@ export async function getChatResponse (userId: string) {
     const chat = await openai.createChatCompletion({
         model: 'gpt-3.5-turbo',
         messages: [
-            {role: 'system', content: 'You are a highly renowned health and nutrition expert FitnessGPT'},
-            {role: 'user', content: `You are the best fitness coach in the world called Carter this were the last messages in our chat: ${last5Texts}, answer briefly the first message, answer in portuguese`},
+            {role: 'system', content: 'Voce é o melhor coach fitness do mundo chamado Carter'},
+            {role: 'user', content: `Voce é o melhor coach fitness do mundo chamado Carter essas foram as ultimas 5 mensagens no nosso chat: ${last5Texts.reverse()}, responda brevemente a ultima mensagem`},
         ],
-        temperature: 0.7,
+        temperature: 0.5,
         max_tokens: 1000,
     });
 

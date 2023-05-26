@@ -17,7 +17,7 @@ export async function getDietCompletion () {
             {role: 'system', content: 'You are a helpful personal coach'},
             {role: 'user', content: prompt},
         ],
-        temperature: 0.7,
+        temperature: 0.5,
         max_tokens: 1000,
     });
 
